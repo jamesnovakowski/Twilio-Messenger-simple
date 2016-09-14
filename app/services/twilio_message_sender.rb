@@ -10,13 +10,13 @@ module TwilioMessageSender
   end
 
   def self.send(message_to_send, number_to_send_to ) 
-    check_number(number_to_send_to)
-    check_message(message_to_send)
+    #check_number(number_to_send_to)
+    #check_message(message_to_send)
 
     client.account.messages.create(
       :from => ENV['TWILIO_PHONE_NUMBER'],
-      :to => number_to_send_to
-      :body => message_to_send,
+      :to => number_to_send_to,
+      :body => message_to_send
     )
   end
 
