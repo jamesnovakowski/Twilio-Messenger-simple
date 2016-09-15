@@ -1,5 +1,13 @@
 <h1>New Message</h1>
 
+<p>This app will send a text message to any valid US phone number.</br>
+  Well, one day it will.  For now, James is using a <a href="https://www.twilio.com">Twilio</a> trial account, </br>
+  so can only send to numbers that have been verified.</p>
+
+<p>If you have a verified number, enter that, 10-digit phone number below,</br>
+ and a message and you should receive that message on your phone in a few </br>
+ seconds.</p>
+
 <%= form_for :message, url: messages_path do |f| %>
   <p>
     <%= f.label :number_to_send_to %><br>
@@ -12,6 +20,6 @@
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit "Send My Message!" %>
   </p>
 <% end %>
